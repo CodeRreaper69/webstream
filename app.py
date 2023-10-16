@@ -3,6 +3,7 @@ import av
 import cv2
 from plyer import notification
 import time
+import streamlit as st
 cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 st.title(":violet[FACE DETECTTION NOTIFIER]")
