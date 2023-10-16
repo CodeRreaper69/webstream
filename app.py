@@ -4,10 +4,18 @@ import cv2
 from plyer import notification
 import time
 import streamlit as st
+
 cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 st.title(":violet[FACE DETECTTION NOTIFIER]")
 a = st.button(":blue[PUSH NOTIFICATIONS]")
+
+def notify():
+    notification.notify(title = "CUSTOM NOTIFICATION",
+                        message = "YOUR VIDEO CALL HAS ENDED",
+                        timeout = 10)
+    time.sleep(10)
+
 
 if a:
     notify()
@@ -27,10 +35,5 @@ webrtc_streamer(key="key", video_processor_factory=VideoProcessor,
 					{"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 					)
 	)
-def notify():
-    notification.notify(title = "CUSTOM NOTIFICATION",
-                        message = "YOUR VIDEO CALL HAS ENDED",
-                        timeout = 10)
-    time.sleep(10)
 
 	
