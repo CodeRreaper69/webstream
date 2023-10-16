@@ -9,7 +9,7 @@ st.title(":violet[FACE DETECTTION NOTIFIER]")
 a = st.button(":blue[PUSH NOTIFICATIONS]")
 
 if a:
-	notify()
+    notify()
 class VideoProcessor:
 	def recv(self, frame):
 		frm = frame.to_ndarray(format="bgr24")
@@ -27,7 +27,7 @@ webrtc_streamer(key="key", video_processor_factory=VideoProcessor,
 					)
 	)
 def notify():
-	notification.notify(title = "CUSTOM NOTIFICATION",
+    notification.notify(title = "CUSTOM NOTIFICATION",
                         message = "YOUR VIDEO CALL HAS ENDED",
                         timeout = 10)
     time.sleep(10)
