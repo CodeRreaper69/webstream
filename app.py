@@ -1,7 +1,6 @@
 from streamlit_webrtc import webrtc_streamer, RTCConfiguration
 import av
 import cv2
-from plyer import notification
 import time
 import streamlit as st
 
@@ -10,15 +9,9 @@ cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 st.title(":violet[FACE DETECTTION NOTIFIER]")
 a = st.button(":blue[PUSH NOTIFICATIONS]")
 
-def notify():
-    notification.notify(title = "CUSTOM NOTIFICATION",
-                        message = "YOUR VIDEO CALL HAS ENDED",
-                        timeout = 10)
-    time.sleep(10)
-
 
 if a:
-    notify()
+    st.toast("PUSH NOTIFICATION ENABLED","NOTIFICATION","INFO")
 class VideoProcessor:
 	def recv(self, frame):
 		frm = frame.to_ndarray(format="bgr24")
