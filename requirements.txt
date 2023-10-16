@@ -2,7 +2,3 @@ streamlit
 opencv-python-headless
 streamlit-webrtc
 av
-plyer
-pygame
-pyvirtualdisplay
-xvfbwrapper
