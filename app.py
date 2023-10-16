@@ -6,7 +6,7 @@ import streamlit as st
 
 cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
-st.title(":violet[FACE DETECTTION NOTIFIER]")
+st.title(":violet[FACE DETECTION NOTIFIER]")
 a = st.button(":blue[PUSH NOTIFICATIONS]")
 
 
