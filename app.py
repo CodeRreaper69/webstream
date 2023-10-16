@@ -1,6 +1,7 @@
 from streamlit_webrtc import webrtc_streamer, RTCConfiguration
 import av
 import cv2
+from plyer import notification
 
 cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
@@ -20,3 +21,9 @@ webrtc_streamer(key="key", video_processor_factory=VideoProcessor,
 					{"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 					)
 	)
+def notify():
+    notification.notify(title = "CUSTOM NOTIFICATION",
+                        message = "YOUR VIDEO CALL HAS ENDED",
+                        timeout = 10)
+    time.sleep(10)
+notify()
