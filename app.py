@@ -11,7 +11,11 @@ a = st.button(":blue[PUSH NOTIFICATIONS]")
 
 
 if a:
-    st.toast("PUSH NOTIFICATION ENABLED","NOTIFICATION","INFO")
+    st.toast("PUSH NOTIFICATION ENABLED")
+    time.sleep(5)
+    st.toast("WAKE UP!DON'T SLEEP")
+	
+	
 class VideoProcessor:
 	def recv(self, frame):
 		frm = frame.to_ndarray(format="bgr24")
