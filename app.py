@@ -2,7 +2,7 @@ from streamlit_webrtc import webrtc_streamer, RTCConfiguration
 import av
 import cv2
 from plyer import notification
-
+import time
 cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 class VideoProcessor:
