@@ -30,6 +30,6 @@ def notify():
 	notification.notify(title = "CUSTOM NOTIFICATION",
                         message = "YOUR VIDEO CALL HAS ENDED",
                         timeout = 10)
-    	time.sleep(10)
+    time.sleep(10)
 
 	
